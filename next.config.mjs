@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const Prod = process.env.NODE_ENV = 'production';
+
 const nextConfig = {
+    basePath: Prod ? '/navbarINEA' : '',
     output: 'export',
-    distDir: 'dist',
-    images:{
+    images: {
       unoptimized:true,
     },
 };
