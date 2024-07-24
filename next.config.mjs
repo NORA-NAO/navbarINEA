@@ -6,6 +6,7 @@ const nextConfig = {
       path: "",
     },
     assetPrefix: "./",
+    reactStrictMode: true,
 };
 
 export default nextConfig;
