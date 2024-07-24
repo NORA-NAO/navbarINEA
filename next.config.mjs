@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 
-const Prod = process.env.NODE_ENV = 'production';
 
 const nextConfig = {
-    basePath: Prod ? '/navbarINEA' : '',
+    basePath:'/navbarINEA',
     output: 'export',
     images: {
       unoptimized:true,
