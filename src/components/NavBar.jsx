@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./NavBar.css";
+import Image from 'next/image'
 
 const Navbar = () => {
   return (
@@ -15,7 +16,7 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/LogoEducacion.svg"
+                  src="/navbarINEA/LogoEducacion.svg"
                   alt="Educacion"
                   className="hover:text-[#8B6C41] p-2 rounded inline-block py-0.3rem mr-1rem leading-relaxed"
                 />
@@ -76,7 +77,7 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/LogoINEACDMX_withe.svg"
+                  src="/navbarINEA/LogoINEACDMX_withe.svg"
                   alt="INEA"
                   className="hover:text-[#8B6C41] p-1 rounded inline-block py-0.3rem mr-1rem leading-relaxed"
                 />
