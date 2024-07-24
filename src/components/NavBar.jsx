@@ -15,8 +15,8 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/LogoEducación.svg"
-                  alt="Gobierno de México"
+                  src="../../public/LogoEducacion.svg"
+                  alt="Educacion"
                   className="hover:text-[#8B6C41] p-2 rounded inline-block py-0.3rem mr-1rem leading-relaxed"
                 />
               </Link>
@@ -76,7 +76,7 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/LogoINEACDMX_withe.svg"
+                  src="../../public/LogoINEACDMX_withe.svg"
                   alt="INEA"
                   className="hover:text-[#8B6C41] p-1 rounded inline-block py-0.3rem mr-1rem leading-relaxed"
                 />
