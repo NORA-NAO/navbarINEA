@@ -4,6 +4,8 @@ import "./NavBar.css";
 import { useState } from "react";
 import Image from "next/image";
 
+
+
 const Navbar = () => {
   const [isClick, setisClick] = useState(false);
   const [isClickINEA, setisClickINEA] = useState(false);
@@ -45,7 +47,7 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/navbarINEA/LogoEducacion.svg"
+                  src="/navbarINEA/LogoEducación.svg"
                   alt="Educacion"
                   className=" hover:text-[#8B6C41]  rounded inline-block py-[0.3rem] mr-[1rem]"
                 />
