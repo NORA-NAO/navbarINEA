@@ -45,7 +45,7 @@ const Navbar = () => {
                 passHref
               >
                 <img
-                  src="/LogoEducacion.svg"
+                  src="/navbarINEA/LogoEducacion.svg"
                   alt="Educacion"
                   className=" hover:text-[#8B6C41]  rounded inline-block py-[0.3rem] mr-[1rem]"
                 />
