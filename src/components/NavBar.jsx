@@ -37,23 +37,26 @@ const Navbar = () => {
       {/* Contenedor del menú */}
       <div className="w-full ">
         {/* Menú gobierno */}
-        <nav className="bg-[#03281A]">
-          <div className="flex items-center justify-between py-[0.2rem] px-auto">
-            <div className="flex items-center ">
+        <nav className="bg-[#0C231E]">
+          <div className="flex items-center justify-between py-[0.1rem] px-auto">
+            <div className="flex items-center">
               <Link
                 href="https://www.gob.mx/sep"
                 passHref
               >
                 <img
-                  src="/navbarINEA/LogoEducacion.svg"
+                  src="/LogoEducacion.svg"
                   alt="Educacion"
-                  className=" hover:text-[#8B6C41]  rounded inline-block py-0.3rem mr-1rem"
+                  className=" hover:text-[#8B6C41]  rounded inline-block py-[0.3rem] mr-[1rem]"
                 />
               </Link>
             </div>
-            <div className="flex items-center space-x-7">
-              <div className="hidden md:block px-[8rem]">
-                <div className="ml-4 flex items-end space-x-4">
+            <div
+              className="flex items-center space-x-7"
+              id="contenidoSup"
+            >
+              <div className="hidden md:block">
+                <div className="ml-4 flex items-end space-x-5">
                   <Link
                     href="/"
                     passHref
@@ -101,7 +104,7 @@ const Navbar = () => {
               {/*Boton para desplegable hamburguesa */}
               <div className="md:hidden flex items-end">
                 <button
-                  className="inline-flex items-center w-auto h-auto mr-[2rem] rounded-md text-white hover:text-[#E4CDA7]
+                  className="inline-flex items-center w-auto h-auto rounded-md text-white hover:text-[#E4CDA7]
                  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#E4CDA7]"
                   onClick={toggleNavBar}
                 >
@@ -190,8 +193,8 @@ const Navbar = () => {
         </nav>
 
         {/* Menú inferior */}
-        <nav className="navBarINEA bg-[#0C3022] p-2 w-full">
-          <div className="flex items-center justify-between container ml-auto px-4 ">
+        <nav className="navBarINEA bg-[#12322B] p-1 w-full">
+          <div className="flex items-center justify-between container ml-auto">
             <div className="flex items-center">
               <Link
                 href="/"
@@ -200,10 +203,10 @@ const Navbar = () => {
             </div>
             <div
               id="menubajo"
-              className="flex items-center space-x-10 "
+              className="flex items-center space-x-10"
             >
               <div className="hidden md:block">
-                <div className="ml-4 flex items-end space-x-10">
+                <div className="ml-4 flex items-end space-x-5">
                   <Link
                     href="/inicio"
                     passHref
@@ -212,7 +215,7 @@ const Navbar = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 4 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
                       className="h-6 w-full m-0"
@@ -249,8 +252,11 @@ const Navbar = () => {
                         />
                       </svg>
                     </Link>
-
-                    <div className="hidden group-hover:block absolute bg-gray-100 mt-2 rounded shadow-lg text-black">
+                    <div className="absolute left-0 mt-2 hidden group-hover:block bg-gray-100 text-black rounded shadow-lg z-50">
+                      {/* <div className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform transition-all duration-300 delay-200 absolute bg-gray-100 text-black mt-2 rounded shadow-lg z-50"> */}
+                      {/* cambie que ahora en vez de que este oculto siempre este ahi pero en una capa de z mas alto para que no afecte el tamaño del navbar  */}
+                      {/* este es el anterior */}
+                      {/* <div className="hidden    group-hover:block absolute bg-gray-100 text-black mt-2 rounded shadow-lg  transition-opacity duration-300 delay-200"> */}
                       <Link
                         href="/oferta-educativa/que-modalidad-elijo"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
@@ -270,16 +276,16 @@ const Navbar = () => {
                         En línea / APRENDEINEA
                       </Link>
                       <Link
-                        href="http://www.cursosinea.conevyt.org.mx/index.php?option=com_k2&view=item&layout=item&id=658&Itemid=254"
-                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
+                        href="/oferta-educativa/examen-unico"
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        En línea / MEVyT
+                        Examen Único
                       </Link>
                       <Link
                         href="/oferta-educativa/examen-unico"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        Examen Único
+                        Exámenes diagnósticos
                       </Link>
                     </div>
                   </div>
@@ -288,11 +294,11 @@ const Navbar = () => {
                   <div className="group relative">
                     <Link
                       href="#"
-                      className="hover:text-[#D3C09B] p-2 rounded flex items-center justify-between w-full "
+                      className="hover:text-[#D3C09B] p-2 flex items-center justify-between w-full"
                     >
                       Servicios
                       <svg
-                        class="w-2.5 h-2.5 ms-2.5"
+                        className="w-2.5 h-2.5 ms-2.5"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -300,14 +306,15 @@ const Navbar = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1"
                           d="M15.434 1.235A2 2 0 0 0 13.586 0H2.414A2 2 0 0 0 1 3.414L6.586 9a2 2 0 0 0 2.828 0L15 3.414a2 2 0 0 0 .434-2.179Z"
                         />
                       </svg>
                     </Link>
-                    <div className="hidden group-hover:block absolute bg-gray-100 text-black mt-2 rounded shadow-lg">
+
+                    <div className="absolute left-0 mt-2 hidden group-hover:block bg-gray-100 text-black rounded shadow-lg z-50">
                       <Link
                         href="http://certificacion.inea.gob.mx/DescCertificado.aspx"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
@@ -316,7 +323,7 @@ const Navbar = () => {
                       </Link>
                       <Link
                         href="/servicios/solicitud-duplicados"
-                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate "
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
                       >
                         Solicitud de duplicados
                       </Link>
@@ -339,16 +346,10 @@ const Navbar = () => {
                         Reposición certificados SEP
                       </Link>
                       <Link
-                        href="/servicios/guias-aprendizaje"
-                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
-                      >
-                        Guías de aprendizaje
-                      </Link>
-                      <Link
                         href="/servicios/descargar-modulos"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        Descarga de Módulos
+                        Descarga material de estudio
                       </Link>
                       <Link
                         href="/servicios/revalidacion-extranjeros"
@@ -392,7 +393,8 @@ const Navbar = () => {
                         />
                       </svg>
                     </Link>
-                    <div className="hidden group-hover:block absolute bg-gray-100 text-black mt-2 rounded shadow-lg">
+                    <div className="absolute left-0 mt-2 hidden group-hover:block bg-gray-100 text-black rounded shadow-lg z-50">
+                      {/* <div className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform transition-all duration-300 delay-200 absolute bg-gray-100 text-black mt-2 rounded shadow-lg z-50"> */}
                       <Link
                         href="http://www.inea.gob.mx/servicios_en_linea/Consulta_avance_academico.html"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
@@ -416,6 +418,12 @@ const Navbar = () => {
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
                         SAEL
+                      </Link>
+                      <Link
+                        href=""
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
+                      >
+                        Departamento de Planeación
                       </Link>
                     </div>
                   </div>
@@ -443,7 +451,9 @@ const Navbar = () => {
                         />
                       </svg>
                     </Link>
-                    <div className="hidden group-hover:block absolute bg-gray-100 text-black mt-2 rounded shadow-lg">
+
+                    <div className="absolute left-0 mt-2 hidden group-hover:block bg-gray-100 text-black rounded shadow-lg z-50">
+                      {/* <div className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform transition-all duration-300 delay-200 absolute bg-gray-100 text-black mt-2 rounded shadow-lg z-50"> */}
                       <Link
                         href="http://cdmx.inea.gob.mx/CATN2/login.asp"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
@@ -498,6 +508,12 @@ const Navbar = () => {
                       >
                         SATIC
                       </Link>
+                      <Link
+                        href="https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=4&ct=1420848406&rver=6.4.6456.0&wp=MCMBI&wreply=https://portal.office.com/landing.aspx?target=%2fdefault.aspx&lc=2058&id=501392&sso_reload=true"
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
+                      >
+                        Correo Institucional
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -506,7 +522,7 @@ const Navbar = () => {
               {/* Boton hamburguesa */}
               <div className="md:hidden flex ">
                 <button
-                  className="inline-flex items-center justify-center p-1 rounded-md text-white hover:text-[#E4CDA7]
+                  className="inline-flex items-center justify-center  p-2 rounded-md text-white hover:text-[#E4CDA7]
                  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#E4CDA7]"
                   onClick={toggleNavBarINEA}
                 >
@@ -619,16 +635,16 @@ const Navbar = () => {
                         En línea / APRENDEINEA
                       </Link>
                       <Link
-                        href="http://www.cursosinea.conevyt.org.mx/index.php?option=com_k2&view=item&layout=item&id=658&Itemid=254"
-                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded truncate"
+                        href="/oferta-educativa/examen-unico"
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        En línea / MEVyT
+                        Examen Único
                       </Link>
                       <Link
                         href="/oferta-educativa/examen-unico"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        Examen Único
+                        Exámenes diagnósticos
                       </Link>
                     </div>
                   )}
@@ -690,16 +706,10 @@ const Navbar = () => {
                         Reposición certificados SEP
                       </Link>
                       <Link
-                        href="/servicios/guias-aprendizaje"
-                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
-                      >
-                        Guías de aprendizaje
-                      </Link>
-                      <Link
                         href="/servicios/descargar-modulos"
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
-                        Descarga de Módulos
+                        Descarga material de estudio
                       </Link>
                       <Link
                         href="/servicios/revalidacion-extranjeros"
@@ -769,6 +779,13 @@ const Navbar = () => {
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
                         SAEL
+                      </Link>
+                      <Link
+                        href=""
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
+                      >
+                        Departamento de Planeación, Seguimiento Operativo y
+                        Acreditación
                       </Link>
                     </div>
                   )}
@@ -852,6 +869,12 @@ const Navbar = () => {
                         className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
                       >
                         SATIC
+                      </Link>
+                      <Link
+                        href="https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=4&ct=1420848406&rver=6.4.6456.0&wp=MCMBI&wreply=https://portal.office.com/landing.aspx?target=%2fdefault.aspx&lc=2058&id=501392&sso_reload=true"
+                        className="block hover:bg-[#D3C09B] hover:text-white p-2 rounded"
+                      >
+                        Correo Institucional
                       </Link>
                     </div>
                   )}

@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-
-
-const nextConfig = {
-    basePath:'/navbarINEA',
-    output: 'export',
-    images: {
-      unoptimized:true,
-    },
-};
+const nextConfig = {};
 
 export default nextConfig;
